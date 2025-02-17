@@ -1,3 +1,5 @@
+package Models;
+
 public enum MovieGenre {
     WESTERN,
     ADVENTURE,

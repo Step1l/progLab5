@@ -10,6 +10,9 @@ public class Movie {
     private LocalDateTime creationDate;
     private int oscarCount;
     String tagline;
+
+
+
     private long length;
     private MovieGenre genre;
     private Person operator;
@@ -25,4 +28,20 @@ public class Movie {
         this.genre=genre;
         this.operator = operator;
     }
+    public Long getId(){return id;}
+
+    public String getName(){
+        return name;
+    }
+    public int getOscarCount(){
+        return getOscarCount();
+    }
+
+    public String getTagline() {
+        return tagline;
+    }
+    public long getLength() {
+        return length;
+    }
+
 }

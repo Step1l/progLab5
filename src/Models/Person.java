@@ -4,6 +4,8 @@ import java.util.Date;
 
 
 public class Person {
+
+
     private String name;
     private Date birthday;
     private double height;
@@ -12,5 +14,16 @@ public class Person {
         this.name = name;
         this.birthday = birthday;
         this.height = height;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public double getHeight() {
+        return height;
     }
 }

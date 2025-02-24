@@ -6,15 +6,28 @@ import java.time.LocalDateTime;
 public class Movie {
     private Long id;
     private String name;
+
+
+
     private Coordinates coordinates;
+
+
     private LocalDateTime creationDate;
+
+
+
     private int oscarCount;
     String tagline;
 
 
 
     private long length;
+
+
     private MovieGenre genre;
+
+
+
     private Person operator;
 
     public Movie(Long id, String name, Coordinates coordinates, LocalDateTime creationDate,int oscarCount, String tagline, long length,MovieGenre genre, Person operator){
@@ -31,17 +44,33 @@ public class Movie {
     public Long getId(){return id;}
 
     public String getName(){
+
         return name;
     }
     public int getOscarCount(){
-        return getOscarCount();
+
+        return oscarCount;
     }
 
     public String getTagline() {
+
         return tagline;
     }
     public long getLength() {
+
         return length;
+    }
+    public Coordinates getCoordinates() {
+        return coordinates;
+    }
+    public LocalDateTime getCreationDate() {
+        return creationDate;
+    }
+    public MovieGenre getGenre() {
+        return genre;
+    }
+    public Person getOperator() {
+        return operator;
     }
 
 }

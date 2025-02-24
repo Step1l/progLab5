@@ -7,14 +7,27 @@ public class CollectionManager {
     TreeSet<Movie> col;
     HashMap<Long, Movie> idCol = new HashMap<>();
     public CollectionManager(TreeSet<Movie> col){
+        for (Movie a : col){
+            if (!idCol.containsValue(a) && !idCol.containsKey(a.getId())){
+                idCol.put(a.getId(),a);
+            }
+            else{
+                //выбрасываем исключение
+            }
+        }
         this.col=col;
     }
 
-    public TreeSet<Movie> getCol(){
+    public TreeSet<Movie> getColection(){
+
         return col;
     }
 
     public void add(Movie a){
+        if (col.contains(a)){
+            //Выбросить исключение или т.п.
+
+        }
         idCol.put(a.getId(),a);
         col.add(a);
 

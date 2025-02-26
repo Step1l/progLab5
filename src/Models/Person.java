@@ -8,6 +8,9 @@ public class Person {
 
     private String name;
     private Date birthday;
+
+
+
     private double height;
 
     public Person(String name, Date birthday, double height){
@@ -25,6 +28,17 @@ public class Person {
 
     public double getHeight() {
         return height;
+    }
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     @Override

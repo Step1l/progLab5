@@ -2,6 +2,8 @@ package Models;
 
 public class Coordinates {
 
+
+
     private int x;
     private Long y;
 
@@ -15,6 +17,13 @@ public class Coordinates {
 
     public Long getY() {
         return y;
+    }
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(Long y) {
+        this.y = y;
     }
 
     @Override

@@ -6,30 +6,13 @@ import java.time.LocalDateTime;
 public class Movie {
     private Long id;
     private String name;
-
-
-
     private Coordinates coordinates;
-
-
     private LocalDateTime creationDate;
-
-
-
     private int oscarCount;
     String tagline;
-
-
-
     private long length;
-
-
     private MovieGenre genre;
-
-
-
     private Person operator;
-
     public Movie(Long id, String name, Coordinates coordinates, LocalDateTime creationDate,int oscarCount, String tagline, long length,MovieGenre genre, Person operator){
         this.id=id;
         this.name=name;
@@ -72,6 +55,42 @@ public class Movie {
     public Person getOperator() {
         return operator;
     }
+    public void setOperator(Person operator) {
+        this.operator = operator;
+    }
+
+    public void setGenre(MovieGenre genre) {
+        this.genre = genre;
+    }
+
+    public void setLength(long length) {
+        this.length = length;
+    }
+
+    public void setTagline(String tagline) {
+        this.tagline = tagline;
+    }
+
+    public void setOscarCount(int oscarCount) {
+        this.oscarCount = oscarCount;
+    }
+
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 
     @Override
     public boolean equals(Object ob){

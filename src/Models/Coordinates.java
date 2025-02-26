@@ -17,4 +17,14 @@ public class Coordinates {
         return y;
     }
 
+    @Override
+    public boolean equals(Object ob){
+        if (this == ob)return true;
+        if (ob == null) return false;
+        if (getClass() != ob.getClass()) return false;
+        Coordinates b = (Coordinates) ob;
+        if (x==b.x && y==b.y)return true;
+        return false;
+    }
+
 }

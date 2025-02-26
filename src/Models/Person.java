@@ -26,4 +26,14 @@ public class Person {
     public double getHeight() {
         return height;
     }
+
+    @Override
+    public boolean equals(Object ob){
+        if (this == ob) return true;
+        if (ob==null) return false;
+        if (getClass() != ob.getClass()) return false;
+        Person b = (Person) ob;
+        if (name.equals(b.name)&& birthday.equals(b.birthday)&& height==b.height) return true;
+        return false;
+    }
 }

@@ -73,4 +73,16 @@ public class Movie {
         return operator;
     }
 
+    @Override
+    public boolean equals(Object ob){
+        if (this == ob) return true;
+        if (ob==null)return false;
+        if (getClass() != ob.getClass()) return false;
+        Movie b = (Movie) ob;
+        if (id.equals(b.id) && name.equals(b.name) && coordinates.equals(b.coordinates)&& creationDate.equals(b.creationDate)&& oscarCount==b.oscarCount && tagline.equals(b.tagline)&& length==b.length && genre.equals(b.genre)&&operator.equals(b.operator)){
+            return true;
+        }
+        return false;
+    }
+
 }

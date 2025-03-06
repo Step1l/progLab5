@@ -3,16 +3,23 @@ package Comands;
 import Transfer.Request;
 import Transfer.Response;
 
-abstract class Command {
+abstract public class Command {
     private String name;
     private String description;
 
-    public Command(String name,String description){
+    private Boolean argIsMovie;
+
+    public Command(String name,String description,Boolean argIsMovie){
         this.name=name;
         this.description =description;
+        this.argIsMovie = argIsMovie;
+    }
+    public Command(String name, String description){
+        this.name=name;
+        this.description=description;
     }
 
-    public String getDescriprion(){
+    public String getDescription(){
 
         return description;
     }
@@ -20,6 +27,11 @@ abstract class Command {
 
         return name;
     }
+    public Boolean getArgIsMovie() {
+        return argIsMovie;
+    }
+
+
 
     abstract public Response execute(Request req);
 }

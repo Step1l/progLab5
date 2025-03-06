@@ -6,7 +6,8 @@ import Transfer.Response;
 
 public class Add extends Command{
     public Add(){
-        super("add","Добавляет фильм в коллекцию");
+
+        super("add","Добавляет фильм в коллекцию",true);
     }
 
 

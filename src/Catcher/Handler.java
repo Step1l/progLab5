@@ -1,5 +1,6 @@
 package Catcher;
 
+import Builders.MovieBuilder;
 import Comands.CommandMap;
 import IO.Console;
 import Models.Movie;

@@ -13,7 +13,7 @@ public class ConsoleWorker implements Console {
     @Override
     public String ask(String question){
         System.out.println(question);
-        return scanner.next();
+        return scanner.nextLine();
     }
 
 }

@@ -17,6 +17,7 @@ abstract public class Command {
     public Command(String name, String description){
         this.name=name;
         this.description=description;
+        this.argIsMovie = false;
     }
 
     public String getDescription(){

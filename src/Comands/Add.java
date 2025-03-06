@@ -13,7 +13,7 @@ public class Add extends Command{
 
     @Override
     public Response execute(Request req){
-        CollectionManager.getInstance().getCollection().add(req.movies().get(0));
+        CollectionManager.getInstance().getCollection().add(req.movie());
         return new Response("Добавленно");
 
     }

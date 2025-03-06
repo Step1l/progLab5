@@ -6,6 +6,9 @@ import IO.Console;
 import Models.Movie;
 import Transfer.Request;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Handler {
     private Console console;
 
@@ -20,6 +23,7 @@ public class Handler {
             String line = console.ask("");
             while (line != null){
                 console.printMessage(Executer.getInstance().doRequest(parse(line)).toString());
+                line = console.ask("Команда:");
             }
         }catch(Exception e){
             console.printMessage(e.getMessage());
@@ -30,11 +34,12 @@ public class Handler {
     private Request parse(String line){
         String[] parses = line.split(" ");
         String command = parses[0];
-        String args = parses.length>1?parses[1]:null;
-        Movie movie;
+        List<String> args = Arrays.asList(Arrays.copyOfRange(parses,1,parses.length));
+        Movie movie= null;
         if (CommandMap.getInstance().getCommand(parses[0]).getArgIsMovie()){
             movie = MovieBuilder.getInstance().build(console);
         }
+        return new Request(command,args,movie);
 
     }
 

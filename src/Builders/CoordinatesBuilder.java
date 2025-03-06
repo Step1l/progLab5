@@ -15,8 +15,8 @@ public class CoordinatesBuilder {
     }
 
     public Coordinates build(Console console){
-        int x = Integer.getInteger(console.ask("x:"));
-        Long y = Long.getLong(console.ask("y:"));
+        int x = Integer.parseInt(console.ask("x:"));
+        Long y = Long.parseLong(console.ask("y:"));
         return new Coordinates(x,y);
     }
 }

@@ -20,7 +20,7 @@ public class MovieGenreBuilder {
         for (int i=1;i<6;i++){
             console.printMessage(i+":"+map.get(i));
         }
-        int ind = Integer.getInteger(console.ask("genre:"));
+        int ind = Integer.parseInt(console.ask("genre:"));
         return map.get(ind);
     }
 }

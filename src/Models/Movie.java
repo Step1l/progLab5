@@ -3,7 +3,7 @@ package Models;
 import java.time.LocalDateTime;
 
 
-public class Movie {
+public class Movie  implements  Comparable<Movie>{
     private Long id;
     private String name;
     private Coordinates coordinates;
@@ -89,6 +89,13 @@ public class Movie {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public int compareTo(Movie var1){
+        if (this.id>var1.id) return 1;
+        if (this.id<var1.id) return -1;
+        return 0;
     }
 
 

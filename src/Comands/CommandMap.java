@@ -5,7 +5,7 @@ import java.util.Map;
 public class CommandMap {
 
     private static CommandMap instance;
-    private Map<String,Command> map = Map.of("add",new Add(),"exit", new Exit());
+    private Map<String,Command> map = Map.of("add",new Add(),"exit", new Exit(),"show",new Show());
 
     private CommandMap(){}
 

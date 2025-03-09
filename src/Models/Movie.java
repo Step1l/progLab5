@@ -111,4 +111,10 @@ public class Movie  implements  Comparable<Movie>{
         return false;
     }
 
+    @Override
+    public String toString(){
+        return "id: "+id + "\n" +"имя: "+name+"\n"+ "коорднаты: \n**START_COORDINATES**"+coordinates +"**END_COORDINATES**\n"+ "дата создания: " +creationDate + "\n" + "Количество оскаров: " + oscarCount +"\n" + "подзаголовок: " +tagline +"\n"+ "длинна: " +length + "\n" + "жанр: "+genre +"\n"+ "режиссер: \n" +"**START_OPERATOR**\n" + operator +"**END_OPERATOR"+"\n";
+
+    }
+
 }

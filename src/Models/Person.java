@@ -1,5 +1,6 @@
 package Models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -49,5 +50,10 @@ public class Person {
         Person b = (Person) ob;
         if (name.equals(b.name)&& birthday.equals(b.birthday)&& height==b.height) return true;
         return false;
+    }
+
+    @Override
+    public String toString(){
+        return "имя: " +name +"\n" +"дата рождения: " +birthday+"\n"+"рост: "+height +"\n";
     }
 }

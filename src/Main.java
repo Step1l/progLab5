@@ -1,4 +1,5 @@
 import Catcher.Handler;
+import Comands.CommandMap;
 import IO.Console;
 import IO.ConsoleWorker;
 

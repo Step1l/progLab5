@@ -8,7 +8,7 @@ public class CommandMap {
 
 
 
-    private Map<String,Command> map = Map.of("add",new Add(),"exit", new Exit(),"show",new Show(),"help", new Help());
+    private Map<String,Command> map = Map.of("add",new Add(),"exit", new Exit(),"show",new Show(),"help", new Help(),"clear",new Clear());
 
     private CommandMap(){}
 
